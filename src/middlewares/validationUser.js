@@ -1,3 +1,6 @@
+const Joi = require('joi');
+const { User } = require('../database/models');
+
 const fieldsValidations = Joi.object({
   displayName: Joi.string().min(8).required().messages({
     'any.required': '"displayName" is required',
@@ -13,6 +16,7 @@ const fieldsValidations = Joi.object({
   }),
 });
 
+const userFields = async (req, res, next) => {
   const validFields = fieldsValidations.validate(req.body);
   if (validFields.error) {
     return next({ message: validFields.error.details[0].message, code: 400 });
@@ -20,3 +24,8 @@ const fieldsValidations = Joi.object({
   const { email } = req.body;
   const user = await User.findOne({ where: { email } });
   if (user) return next({ message: 'User already registered', code: 409 });
+
+  return next();
+};
+
+module.exports = userFields;
