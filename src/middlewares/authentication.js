@@ -4,3 +4,6 @@ require('dotenv').config();
     const decodedInformation = jwt.verify(authorization, JWT_SECRET);
     req.userData = decodedInformation;
     return next();
+  } catch (err) {
+    return next({ message: 'Expired or invalid token', code: 401 });
+  }
