@@ -9,6 +9,9 @@ const loginService = {
     const user = await User.findOne({ where: { email } });
     if (!user) return { message: 'Invalid fields', code: 400 };
     if (user && user.password !== password) return { message: 'Invalid fields', code: 400 };
+
+    const token = jwt.sign({ data: email }, JWT_SECRET, { algorithm: 'HS256' });
+    return { token };
   },
 };
 
