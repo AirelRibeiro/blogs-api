@@ -17,3 +17,6 @@ const fieldsValidations = Joi.object({
   if (validFields.error) {
     return next({ message: validFields.error.details[0].message, code: 400 });
   }
+  const { email } = req.body;
+  const user = await User.findOne({ where: { email } });
+  if (user) return next({ message: 'User already registered', code: 409 });
