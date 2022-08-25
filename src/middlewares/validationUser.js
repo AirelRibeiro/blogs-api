@@ -12,3 +12,8 @@ const fieldsValidations = Joi.object({
     'string.min': '"password" length must be at least 6 characters long',
   }),
 });
+
+  const validFields = fieldsValidations.validate(req.body);
+  if (validFields.error) {
+    return next({ message: validFields.error.details[0].message, code: 400 });
+  }
