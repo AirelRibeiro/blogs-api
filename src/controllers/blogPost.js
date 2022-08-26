@@ -48,6 +48,8 @@ const blogPostController = {
       await blogPostService.delete(req.params.id);
       return res.status(204).end();
     } catch (err) {
+      return next(err);
+    }
   },
 };
 
