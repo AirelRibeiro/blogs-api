@@ -1,10 +1,11 @@
-const { BlogPost, Category, User } = require('../database/models');
+const { BlogPost, Category, User, PostCategory } = require('../database/models');
 
 const blogPostService = {
   create: async (newPost, categories) => {
     const { dataValues: 
       { id, title, content, published, updated } } = await BlogPost.create(newPost);
     await Promise.all(categories.map((c) => PostCategory.create({ postId: id, categoryId: c })));
+    return { id, title, content, userId: newPost.userId, published, updated };
   },
 
   findAll: async () => {
