@@ -17,6 +17,7 @@ const userService = {
 
     return users;
     const user = await User.findByPk(id, { attributes: { exclude: ['password'] } });
+    if (!user) return { message: 'User does not exist', code: 404 };
   },
 };
 
