@@ -1,3 +1,5 @@
+const categoryService = require('../services/category');
+
 const validateFieldsExistence = (body) => {
   if (!body.title || !body.content) {
     return { message: 'Some required fields are missing', code: 400 };
@@ -19,3 +21,25 @@ const validateCategoryExistence = async (categories) => {
   }
   return validCategories;
 };
+
+const validPost = async (req, res, next) => {
+  const { body } = req;
+
+  const validate = validateFieldsExistence(body);
+  if (validate.message) return next(validate);
+
+  const validsCategories = await validateCategoryExistence(body.categoryIds);
+  if (validsCategories.message) return next(validsCategories);
+
+  const { id } = req.userData;
+  req.newPost = {
+    title: body.title,
+    content: body.content,
+    userId: id,
+    categoryIds: validsCategories,
+  };
+
+  next();
+};
+
+module.exports = validPost;
