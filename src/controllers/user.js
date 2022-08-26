@@ -9,6 +9,9 @@ const userController = {
       return next(err);
     }
   },
+    try {
+      const users = await userService.findAll();
+      return res.status(200).json(users);
 };
 
 module.exports = userController;
