@@ -1,3 +1,5 @@
+const categoryService = require('../services/category');
+
 const categoryController = {
   create: async (req, res, next) => {
     try {
@@ -6,4 +8,7 @@ const categoryController = {
     } catch (err) {
       return next(err);
     }
+  },
 };
+
+module.exports = categoryController;
