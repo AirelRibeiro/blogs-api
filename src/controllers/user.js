@@ -12,6 +12,8 @@ const userController = {
     try {
       const users = await userService.findAll();
       return res.status(200).json(users);
+    } catch (err) {
+      return next(err);
 };
 
 module.exports = userController;
