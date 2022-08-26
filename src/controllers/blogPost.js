@@ -9,6 +9,8 @@ const blogPostController = {
       return next(err);
     }
   },
+  findOnePost: async (req, res, next) => {
+  },
 };
 
 module.exports = blogPostController;
