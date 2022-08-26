@@ -30,6 +30,13 @@ const blogPostService = {
 
     return post;
   },
+
+  update: (postInformation, id) => BlogPost.update(postInformation, {
+      where: { id },
+    }).then(async () => {
+      const post = await blogPostService.findOnePost(id);
+      return post;
+    }),
 };
 
 module.exports = blogPostService;
