@@ -7,6 +7,8 @@ const blogPostController = {
       const post = await blogPostService.create({ title, content, userId }, categoryIds);
       return res.status(201).json(post); 
     } catch (err) {
+      return next(err);
+    }
   },
 
   findAll: async (req, res, next) => {
