@@ -42,6 +42,8 @@ const blogPostController = {
       return next(err);
     }
   },
+  delete: async (req, res, next) => {
+  },
 };
 
 module.exports = blogPostController;
