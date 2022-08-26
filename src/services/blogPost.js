@@ -2,6 +2,8 @@ const { BlogPost, Category, User } = require('../database/models');
 
 const blogPostService = {
   create: async (newPost, categories) => {
+    const { dataValues: 
+      { id, title, content, published, updated } } = await BlogPost.create(newPost);
   },
 
   findAll: async () => {
