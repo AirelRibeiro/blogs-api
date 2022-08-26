@@ -24,6 +24,8 @@ const userService = {
 
     return user;
   },
+
+  delete: (id) => User.destroy({ where: { id } }).then(() => true),
 };
 
 module.exports = userService;
