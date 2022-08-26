@@ -11,6 +11,12 @@ const userService = {
       .sign({ data: { email: userData.email, id: user.id } }, JWT_SECRET, { algorithm: 'HS256' });
     return { token };
   },
+
+  findAll: async () => {
+    const users = await User.findAll({ attributes: { exclude: ['password'] } });
+
+    return users;
+  },
 };
 
 module.exports = userService;
