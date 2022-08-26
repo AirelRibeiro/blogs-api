@@ -14,6 +14,7 @@ const fieldsValidations = Joi.object({
     'any.required': '"displayName" is required',
     'string.min': '"password" length must be at least 6 characters long',
   }),
+  image: Joi.string(),
 });
 
 const userFields = async (req, res, next) => {
