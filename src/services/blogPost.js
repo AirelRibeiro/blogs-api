@@ -37,6 +37,8 @@ const blogPostService = {
       const post = await blogPostService.findOnePost(id);
       return post;
     }),
+
+    delete: (id) => BlogPost.destroy({ where: { id } }).then(() => true),
 };
 
 module.exports = blogPostService;
