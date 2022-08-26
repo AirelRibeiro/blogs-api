@@ -1,3 +1,5 @@
+const { BlogPost, Category, User } = require('../database/models');
+
 const blogPostService = {
   findAll: async () => {
     const posts = await BlogPost.findAll({
@@ -16,6 +18,11 @@ const blogPostService = {
         { model: Category, as: 'categories', through: { attributes: [] } },
       ],
     });
+
     if (!post) return { message: 'Post does not exist', code: 404 };
+
+    return post;
   },
+};
+
 module.exports = blogPostService;
