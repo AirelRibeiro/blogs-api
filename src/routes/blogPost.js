@@ -5,6 +5,8 @@ const tokenAuthentication = require('../middlewares/authentication');
 const blogPostRoute = express.Router();
 
 blogPostRoute.use(tokenAuthentication);
+
+blogPostRoute.get('/:id', blogPostController.findOnePost);
 blogPostRoute.get('/', blogPostController.findAll);
 
 module.exports = blogPostRoute;
