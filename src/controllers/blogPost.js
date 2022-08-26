@@ -18,6 +18,8 @@ const blogPostController = {
 
       return res.status(200).json(post);
     } catch (err) {
+      return next(err);
+    }
   },
 };
 
