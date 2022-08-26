@@ -9,11 +9,15 @@ const userController = {
       return next(err);
     }
   },
+
+  findAll: async (_req, res, next) => {
     try {
       const users = await userService.findAll();
       return res.status(200).json(users);
     } catch (err) {
       return next(err);
+    }
+  },
 };
 
 module.exports = userController;
