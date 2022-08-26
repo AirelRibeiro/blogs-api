@@ -9,4 +9,6 @@ const blogPostService = {
     return posts;
   },
 
+  findOnePost: async (postId) => {
+  },
 module.exports = blogPostService;
