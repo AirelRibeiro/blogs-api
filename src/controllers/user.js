@@ -23,6 +23,8 @@ const userController = {
       if (user.code) return next(user);
       return res.status(200).json(user);
     } catch (err) {
+      next(err);
+    }
 };
 
 module.exports = userController;
