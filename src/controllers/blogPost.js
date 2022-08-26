@@ -42,7 +42,12 @@ const blogPostController = {
       return next(err);
     }
   },
+
   delete: async (req, res, next) => {
+    try {
+      await blogPostService.delete(req.params.id);
+      return res.status(204).end();
+    } catch (err) {
   },
 };
 
