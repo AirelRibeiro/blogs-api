@@ -10,6 +10,14 @@ const blogPostController = {
     }
   },
   findOnePost: async (req, res, next) => {
+    const { id } = req.params;
+    try {
+      const post = await blogPostService.findOnePost(id);
+
+      if (post.message) return next(post);
+
+      return res.status(200).json(post);
+    } catch (err) {
   },
 };
 
