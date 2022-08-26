@@ -4,6 +4,7 @@ const blogPostService = {
   create: async (newPost, categories) => {
     const { dataValues: 
       { id, title, content, published, updated } } = await BlogPost.create(newPost);
+    await Promise.all(categories.map((c) => PostCategory.create({ postId: id, categoryId: c })));
   },
 
   findAll: async () => {
