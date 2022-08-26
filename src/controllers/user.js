@@ -28,6 +28,16 @@ const userController = {
       next(err);
     }
   },
+
+  delete: async (req, res, next) => {
+    try {
+      const { id } = req.userData;
+      await userService.delete(id);
+      return res.status(204).end();
+    } catch (err) {
+      return next(err);
+    }
+  },
 };
 
 module.exports = userController;
