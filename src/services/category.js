@@ -10,6 +10,12 @@ const categoryService = {
     const categories = await Category.findAll();
     return categories;
   },
+
+  findByPk: async (id) => {
+    const category = await Category.findByPk(id);
+    if (!category) return null;
+    return category.id;
+  },
 };
 
 module.exports = categoryService;
