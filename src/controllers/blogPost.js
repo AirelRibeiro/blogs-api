@@ -20,6 +20,20 @@ const blogPostController = {
     }
   },
 
+  findWithQuery: async (req, res, next) => {
+    try {
+      const { q } = req.query;
+      if (!q) {
+        const posts = await blogPostService.findAll();
+        return res.status(200).json(posts);
+      }
+      const posts = await blogPostService.findWithQuery(q);
+      return res.status(200).json(posts);
+    } catch (err) {
+      return next(err);
+    }
+  },
+
   findOnePost: async (req, res, next) => {
     const { id } = req.params;
     try {
