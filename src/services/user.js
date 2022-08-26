@@ -14,10 +14,15 @@ const userService = {
 
   findAll: async () => {
     const users = await User.findAll({ attributes: { exclude: ['password'] } });
-
     return users;
+  },
+
+  findOneUser: async (id) => {
     const user = await User.findByPk(id, { attributes: { exclude: ['password'] } });
+
     if (!user) return { message: 'User does not exist', code: 404 };
+
+    return user;
   },
 };
 
