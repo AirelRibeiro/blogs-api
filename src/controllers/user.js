@@ -18,6 +18,11 @@ const userController = {
       return next(err);
     }
   },
+    try {
+      const user = await userService.findOneUser(req.params.id);
+      if (user.code) return next(user);
+      return res.status(200).json(user);
+    } catch (err) {
 };
 
 module.exports = userController;
