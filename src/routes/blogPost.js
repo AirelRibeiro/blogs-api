@@ -9,6 +9,7 @@ const blogPostRoute = express.Router();
 
 blogPostRoute.use(tokenAuthentication);
 
+blogPostRoute.get('/search', blogPostController.findWithQuery);
 blogPostRoute.get('/:id', blogPostController.findOnePost);
 blogPostRoute.get('/', blogPostController.findAll);
 blogPostRoute.post('/', validPost, blogPostController.create);
