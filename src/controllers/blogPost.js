@@ -2,6 +2,11 @@ const blogPostService = require('../services/blogPost');
 
 const blogPostController = {
   create: async (req, res, next) => {
+    try {
+      const { title, content, userId, categoryIds } = req.newPost;
+      const post = await blogPostService.create({ title, content, userId }, categoryIds);
+      return res.status(201).json(post); 
+    } catch (err) {
   },
 
   findAll: async (req, res, next) => {
