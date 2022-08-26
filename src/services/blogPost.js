@@ -16,5 +16,6 @@ const blogPostService = {
         { model: Category, as: 'categories', through: { attributes: [] } },
       ],
     });
+    if (!post) return { message: 'Post does not exist', code: 404 };
   },
 module.exports = blogPostService;
