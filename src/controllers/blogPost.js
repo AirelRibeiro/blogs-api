@@ -32,6 +32,16 @@ const blogPostController = {
       return next(err);
     }
   },
+
+  update: async (req, res, next) => {
+    try {
+      const { id } = req.params;
+      const post = await blogPostService.update(req.body, id);
+      return res.status(200).json(post);
+    } catch (err) {
+      return next(err);
+    }
+  },
 };
 
 module.exports = blogPostController;
