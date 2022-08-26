@@ -18,6 +18,8 @@ const userController = {
       return next(err);
     }
   },
+
+  findOnUser: async (req, res, next) => {
     try {
       const user = await userService.findOneUser(req.params.id);
       if (user.code) return next(user);
@@ -25,6 +27,7 @@ const userController = {
     } catch (err) {
       next(err);
     }
+  },
 };
 
 module.exports = userController;
