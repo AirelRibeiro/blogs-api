@@ -8,5 +8,6 @@ const categoryRoute = express.Router();
 categoryRoute.use(tokenAuthentication);
 
 categoryRoute.post('/', nameValidate, categoryController.create);
+categoryRoute.get('/', categoryController.findAll);
 
 module.exports = categoryRoute;
