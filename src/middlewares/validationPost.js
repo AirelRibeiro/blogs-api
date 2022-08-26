@@ -7,3 +7,15 @@ const validateFieldsExistence = (body) => {
   }
   return true;
 };
+
+const validateCategoryExistence = async (categories) => {
+  const categoriesArray = await Promise
+    .all(categories.map((category) => categoryService.findByPk(category)));
+
+  const validCategories = categoriesArray.filter((category) => category);
+
+  if (validCategories.length < 1) {
+    return { message: '"categoryIds" not found', code: 400 };
+  }
+  return validCategories;
+};
