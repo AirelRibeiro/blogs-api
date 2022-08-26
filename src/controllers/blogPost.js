@@ -1,6 +1,9 @@
 const blogPostService = require('../services/blogPost');
 
 const blogPostController = {
+  create: async (req, res, next) => {
+  },
+
   findAll: async (req, res, next) => {
     try {
       const posts = await blogPostService.findAll();
