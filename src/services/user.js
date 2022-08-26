@@ -16,6 +16,7 @@ const userService = {
     const users = await User.findAll({ attributes: { exclude: ['password'] } });
 
     return users;
+    const user = await User.findByPk(id, { attributes: { exclude: ['password'] } });
   },
 };
 
