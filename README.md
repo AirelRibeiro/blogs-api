@@ -1,16 +1,58 @@
-# 🚧 README em construção 🚧
+# 🏗️ README em construção 👷🏾
 
-<!-- Olá, Tryber!
+<!-- # <h1 align="center"> ✍🏾 Blogs API 📹🛒 </h1>
 
-Esse é apenas um arquivo inicial para o README do seu projeto.
+[imagem da documentação aqui]
+## Descrição:
 
-É essencial que você preencha esse documento por conta própria, ok?
+<p text-align="justify"></p>
 
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
+## Ferramentas de desenvolvimento:
 
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
+<div align="left">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="50" alt="Docker_logo"  />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="45" alt="Mysql_logo"  />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="45" alt="NodeJs_logo"  />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height="45" alt="Express_logo"  />
+<img src="https://seeklogo.com/images/P/postman-logo-F43375A2EB-seeklogo.com.png" height="45" alt="Postman_logo"  />
+<img src="https://seeklogo.com/images/S/swagger-logo-A49F73BAF4-seeklogo.com.png" height="45" alt="Swagger_logo"  />
 
+[Texto aqui!]
+</div>
+
+## Consultando a documentação por meio do **Postman**:
+
+Clique e escolha entre **Fork collection** ou **View collection**
+
+[![Run in Postman](https://run.pstmn.io/button.svg)]()
+
+## Rodando o projeto na sua máquina:
+
+1. Escolha um diretório e clone o repositório utilizando **git clone**:
+```
+  git clone git@github.com:AirelRibeiro/blogs-api.git
+```
+
+2. Acesse o diretório do projeto **store-manager** e instale as dependências:
+```
+  cd blogs-api
+  npm install
+```
+
+3. Então rode **npm start** para iniciar a aplicação:
+```
+  npm start
+```
+
+4. Por fim, acesse o projeto via navegador, usando a seguinte url:
+```
+  http://localhost:3000
+```
+
+5. Para acessar a documentação da API, vá para o endpoint **/docs**:
+```
+  http://localhost:3000/docs
+```
 -->
+
+
