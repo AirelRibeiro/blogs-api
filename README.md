@@ -24,7 +24,7 @@
 
 Clique e escolha entre **Fork collection** ou **View collection**
 
-[![Run in Postman](https://run.pstmn.io/button.svg)]()
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/22527230-cca31c07-284e-4577-b417-0873f3e491f9?action=collection%2Ffork&collection-url=entityId%3D22527230-cca31c07-284e-4577-b417-0873f3e491f9%26entityType%3Dcollection%26workspaceId%3Dd420281c-c6ee-4fd5-bfa9-080198455738#?env%5BNew%20Environment%5D=W10=)
 
 ## Rodando o projeto na sua máquina:
 
