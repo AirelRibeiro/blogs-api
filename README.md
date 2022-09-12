@@ -1,11 +1,11 @@
-# 🏗️ README em construção 👷🏾
+# <h1 align="center"> ✍🏾 Blogs API 📹 </h1>
 
-<!-- # <h1 align="center"> ✍🏾 Blogs API 📹🛒 </h1>
+![image](https://user-images.githubusercontent.com/98190806/189659626-0fe60595-a0c1-4b5e-8472-79787516abd5.png)
 
-[imagem da documentação aqui]
+
 ## Descrição:
 
-<p text-align="justify"></p>
+<p text-align="justify">Blogs API é uma API RESTful desenvolvida em arquitetura MSC (Model Service Controller), com o Sequelize ORM como responsável pelas consultas e manipulações do banco de dados. A API possibilita o CRUD (Create, Read, Update and Delete, em português criar, ler, atualizar e deletar) de postagens; a criação, leitura e exclusão de usuários; bem como a inclusão e leitura de categorias para as postagens. Tudo isso para simular o sistema de funcionamento de um blog.</p>
 
 ## Ferramentas de desenvolvimento:
 
@@ -17,14 +17,12 @@
 <img src="https://seeklogo.com/images/P/postman-logo-F43375A2EB-seeklogo.com.png" height="45" alt="Postman_logo"  />
 <img src="https://seeklogo.com/images/S/swagger-logo-A49F73BAF4-seeklogo.com.png" height="45" alt="Swagger_logo"  />
 
-[Texto aqui!]
+### 🏗️ Texto em construção 👷🏾
 </div>
 
-## Consultando a documentação por meio do **Postman**:
+## Clique no ícone e acesse a documentação por meio do **Postman**:
 
-Clique e escolha entre **Fork collection** ou **View collection**
-
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/22527230-cca31c07-284e-4577-b417-0873f3e491f9?action=collection%2Ffork&collection-url=entityId%3D22527230-cca31c07-284e-4577-b417-0873f3e491f9%26entityType%3Dcollection%26workspaceId%3Dd420281c-c6ee-4fd5-bfa9-080198455738#?env%5BNew%20Environment%5D=W10=)
+<a href="https://documenter.getpostman.com/view/22527230/2s7YYpfm18" target="blanck"> <img src="https://seeklogo.com/images/P/postman-logo-F43375A2EB-seeklogo.com.png" height="70" alt="Postman_logo"  />
 
 ## Rodando o projeto na sua máquina:
 
@@ -33,7 +31,7 @@ Clique e escolha entre **Fork collection** ou **View collection**
   git clone git@github.com:AirelRibeiro/blogs-api.git
 ```
 
-2. Acesse o diretório do projeto **store-manager** e instale as dependências:
+2. Acesse o diretório do projeto **blogs-api** e instale as dependências:
 ```
   cd blogs-api
   npm install
@@ -48,11 +46,3 @@ Clique e escolha entre **Fork collection** ou **View collection**
 ```
   http://localhost:3000
 ```
-
-5. Para acessar a documentação da API, vá para o endpoint **/docs**:
-```
-  http://localhost:3000/docs
-```
--->
-
-
