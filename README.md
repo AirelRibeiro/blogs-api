@@ -15,7 +15,6 @@
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="45" alt="NodeJs_logo"  />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height="45" alt="Express_logo"  />
 <img src="https://seeklogo.com/images/P/postman-logo-F43375A2EB-seeklogo.com.png" height="45" alt="Postman_logo"  />
-<img src="https://seeklogo.com/images/S/swagger-logo-A49F73BAF4-seeklogo.com.png" height="45" alt="Swagger_logo"  />
 
 ### 🏗️ Texto em construção 👷🏾
 </div>
